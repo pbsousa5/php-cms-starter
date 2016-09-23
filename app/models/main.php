@@ -2,13 +2,10 @@
 if(!defined('ROOT')) {
 	die('Direct access not permitted');
 }
-
-class Main {
+require_once(ROOT.'/app/helpers/system.php');
+class Main_mod {
 
 	public $text;
-
-
-
 	public function __construct() {
 
 	}  

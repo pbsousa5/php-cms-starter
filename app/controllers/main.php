@@ -2,21 +2,18 @@
 if(!defined('ROOT')) {
 	die('Direct access not permitted');
 }
-namespace \app\controllers;
-class Main {
-
-	private $model;
-
-
-
-	public function __construct(Model $model) {
-
-		$this->model = $model;
+// require_once(ROOT.'/app/helpers/system.php');
+class Main extends System {
+	public function __construct() {
 
 	}
 
 	public function index(){
 		echo 'index';
+
+	}
+	public function hello($a='',$b='',$c='',$d=''){
+		echo 'hello : '. $a.' | '.$b.' | '.$c.' | '.$d;
 	}
 
 }
