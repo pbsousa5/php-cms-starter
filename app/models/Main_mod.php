@@ -2,14 +2,15 @@
 if(!defined('ROOT')) {
 	die('Direct access not permitted');
 }
-class Error extends App{
+class Main_mod extends App{
 	public $app;
 	public function __construct($app) {
 		$this->app = $app;
-	}
-	public function index($status,$file){
-		require_once(ROOT.'/app/views/error/index.php');
-	}
+	}  
+
+	public function hello($name){
+		return 'From Model : '.$name.$this->app->config['base_url'];
+	}      
 
 }
 ?>
