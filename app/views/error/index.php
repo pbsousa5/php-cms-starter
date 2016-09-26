@@ -12,6 +12,7 @@ switch ($status) {
 
 	break;
 }
+$base_url = isset($this->app->config['base_url'])?$this->app->config['base_url']:$this->config['base_url'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +26,7 @@ switch ($status) {
 	<meta name="author" content="">
 
 	<title><?php echo $status_title; ?></title>
-	<link href="<?php echo $this->app->config['base_url']; ?>assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo $base_url; ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -39,7 +40,7 @@ switch ($status) {
     				<div class="col-lg-12" align="center">
     					<h1><?php echo $status_title; ?></h1>
     					<p class="alert alert-warning"><strong>Error:</strong> <?php echo $status_detail; ?></p>
-    					<a class="btn btn-default" href="<?php echo $this->app->config['base_url']; ?>">Click here back to home</a>
+    					<a class="btn btn-default" href="<?php echo $base_url; ?>">Click here back to home</a>
     				</div>
     			</div>
     		</div>

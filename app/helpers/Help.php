@@ -11,26 +11,6 @@ class Help extends App
 		$this->app = $app;
 	}
 
-	public function session($name,$action){
-		switch ($action) {
-			case 'set':
-
-			break;
-			case 'get':
-
-			break;
-			case 'delete':
-
-			break;
-			default:
-			return false;
-		}
-	}
-
-	public function cookie($value=array(),$action){
-
-	}
-
 	public function is_ajax(){
 		if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 			return true;
